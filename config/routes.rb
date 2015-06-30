@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
   get "/home" => 'galleries#index'
-  # get "/gallery/:id" => 'galleries#show'
+  get "/gallery/:id" => 'galleries#show'
   get "/random" => 'galleries#random'
 
 

@@ -4,9 +4,10 @@ class GalleriesController < ApplicationController
     @galleries = Gallery.all.order("created_at desc")
   end
 
-  # def show
-  # end
-  #
+  def show
+    @gallery = Gallery.find_by permalink: params[:id]
+  end
+
   def random
     @galleries = Gallery.all.order("RANDOM()")
     render :index
