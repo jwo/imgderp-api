@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get "/home" => 'galleries#index'
   # get "/gallery/:id" => 'galleries#show'
-  # get "/random" => 'galleries#random'
+  get "/random" => 'galleries#random'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

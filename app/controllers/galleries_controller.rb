@@ -7,6 +7,8 @@ class GalleriesController < ApplicationController
   # def show
   # end
   #
-  # def random
-  # end
+  def random
+    @galleries = Gallery.all.order("RANDOM()")
+    render :index
+  end
 end
