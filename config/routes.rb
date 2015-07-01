@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/random" => 'galleries#random'
   post "/galleries" => 'galleries#create'
 
+  post "/comments" => 'comments#create'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
