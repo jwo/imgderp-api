@@ -33,4 +33,14 @@ class GalleriesController < ApplicationController
     end
 
   end
+
+  def like
+    @gallery = Gallery.find_by permalink: params[:id]
+    @gallery.likes += 1
+    if @gallery.save
+      render json: {liked: "👍"}, status: 200
+    else
+      render json: @gallery.errors, status: 422
+    end
+  end
 end

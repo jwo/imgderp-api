@@ -3,10 +3,12 @@ Rails.application.routes.draw do
 
   get "/home" => 'galleries#index'
   get "/gallery/:id" => 'galleries#show'
+  post "/gallery/:id/like" => 'galleries#like'
   get "/random" => 'galleries#random'
   post "/galleries" => 'galleries#create'
 
   post "/comments" => 'comments#create'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

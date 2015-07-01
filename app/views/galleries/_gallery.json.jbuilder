@@ -1,6 +1,7 @@
 json.id gallery.permalink
 json.created_at gallery.created_at.utc.to_i
 json.updated_at gallery.updated_at.utc.to_i
+json.likes gallery.likes
 
 json.images gallery.images do |image|
 
